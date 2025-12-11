@@ -19,7 +19,7 @@ def random_ipv4():
                                 random.randint(0, 255),
                                 random.randint(1, 254))
 
-site = ("studioag.ir")
+site = ("example.ir")
 thread_count = ("99999999999999999999999999999999999999999999999999999999999999999999999999")
 ip = socket.gethostbyname(site)
 UDP_PORT = 80
