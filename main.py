@@ -14,7 +14,6 @@ def handle_sigint(signum, frame):
 signal.signal(signal.SIGINT, handle_sigint)
 
 def random_ipv4():
-    # تولید یک آی‌پی تصادفی (از رنج‌های عمومی استفاده نکن — فقط برای تست روی سرور خودت)
     return "{}.{}.{}.{}".format(random.randint(1, 254),
                                 random.randint(0, 255),
                                 random.randint(0, 255),
@@ -59,5 +58,4 @@ def health():
     return {"status": "ok"}, 200
 
 if __name__ == "__main__":
-    # از پورت 8080 استفاده می‌کنیم تا نیاز به دسترسی ریشه نباشد
     app.run(host="0.0.0.0", port=8080)
